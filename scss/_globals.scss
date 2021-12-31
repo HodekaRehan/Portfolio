@@ -1,0 +1,117 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 3.125rem;
+
+    @include for-size(small) {
+        scroll-padding-top: 3.5rem;
+    }
+
+    @include for-size(medium) {
+        scroll-padding-top: 4rem;
+    }
+
+    @include for-size(tablet) {
+        scroll-padding-top: 4.5rem;
+    }
+
+    @include for-size(large) {
+        scroll-padding-top: 5rem;
+    }
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+  
+body {
+    font-family: 'Roboto Slab', serif;
+    line-height: 1.3;
+    letter-spacing: 2px;
+    overflow-x: hidden;
+}
+
+
+
+h1,h2,h3,h4,h5,h6, .link, .btn, .mobile-link{
+    font-family: 'Ruda', sans-serif;
+}
+
+ul{
+    padding-left: 0;
+}
+
+li{
+    list-style-type: none;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+main{
+    margin-top: 3.125rem;
+
+    @include for-size(small){
+        margin-top: 3.5rem;
+    }
+
+    @include for-size(medium){
+        margin-top: 4rem;
+    }
+
+    @include for-size(tablet){
+        margin-top: 4.5rem;
+    }
+
+    @include for-size(large){
+        margin-top: 5rem;
+    }
+}
+
+section{
+    padding: 0 1.25rem;
+
+    .section-header{
+        font-size: 2rem;
+        text-align: center;
+        padding-top: 2.5rem;
+
+        @include for-size(tablet){
+            font-size: 2.8125rem
+        }
+    }
+
+    @include for-size(small){
+        padding: 0 1.5rem;
+    }
+
+    @include for-size(medium){
+        padding: 0 1.875rem;
+    }
+
+    @include for-size(tablet){
+        padding: 0 2.5rem;
+    }
+
+    @include for-size(large){
+        padding: 0 4rem;
+    }
+}
+
+
+img{
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+
+

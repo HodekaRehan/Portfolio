@@ -1,0 +1,95 @@
+#about-section{
+    background-color: $white;
+}
+
+.about{
+    max-width: 31.25rem;
+    margin: 0 auto;
+
+    @include for-size(large){
+        max-width: 75em;
+        margin: 0 auto 2.5rem auto;
+    }
+
+    .section-header{
+
+        @include for-size(large){
+            padding-top: 5rem;
+    
+        }
+    }
+}
+
+.about-container{
+    @include for-size(large){
+        @include flex-aic-jcc;
+        flex-direction: row;
+        width: 100%;
+
+    }
+
+    
+}
+
+.about-img-wrapper,
+.about-info{
+
+    @include for-size(large){
+        max-width: 50%;
+    }
+    
+}
+
+.about-img{
+    @include for-size(large){
+        max-width: 500px;
+    }
+}
+
+.about-info{
+    @include for-size(large){
+        padding-left: 2.5rem;
+    }
+
+    @include for-size(large){
+        padding-left: 4rem;
+    }
+
+    @include for-size(xlarge){
+        padding-left: 5rem;
+    }
+}
+
+.about-para{
+    font-weight: map-get($font-weights, light );
+    font-size: 1.125rem;
+    text-align: center;
+    line-height: 1.8rem;
+    margin-bottom: 2rem;
+
+    @include for-size(small){
+        font-size: 1.25rem
+    }
+
+    @include for-size(large){
+        text-align: left;
+        font-size: 1.4rem
+    }
+}
+
+.skills{
+    @include flex-aic-jcsb;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+
+    .skill-img{
+        width: 2.5rem;
+
+        @include for-size(large){
+            width: 3.125rem;
+        }
+    }
+}
+
+
+        

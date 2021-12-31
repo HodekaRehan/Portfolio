@@ -1,0 +1,206 @@
+header{
+    background-color: $black;
+    height: 3.125rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 0 1.25rem;
+    @include flex-aic;
+    z-index: 20;
+    // box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    @include for-size(small){
+        height: 3.5rem;
+        padding: 0 1.5rem;
+    }
+
+    @include for-size(medium){
+        height: 4rem;
+        padding: 0 1.875rem;
+    }
+
+    @include for-size(tablet){
+        height: 4.5rem;
+        padding: 0 2.5rem;
+
+    }
+
+    @include for-size(large){
+        height: 5rem;
+        padding: 0 4rem;
+    }
+}
+
+nav{
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    @include flex-aic-jcsb;
+
+    @include for-size(large){
+        max-width: 80em;
+    }
+}
+
+.logo{
+    font-size: 1.75rem;
+    font-weight: map-get($font-weights , bold );
+    color: $white;
+
+    @include for-size(tablet){
+        font-size: 2rem;
+    }
+
+    @include for-size(large){
+        font-size: 2.5rem;
+    }
+}
+
+.menu{
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+    background-color: $white;
+    transition: 0.5s;
+    padding: 3.125rem 1.25rem 1.25rem;
+    @include flex-aic;
+    flex-direction: column;
+    justify-content: space-evenly;
+    overflow: hidden;
+
+    
+
+    @include for-size(tablet){
+        position: initial;
+        width: initial;
+        height: initial;
+        @include flex-aic;
+        flex-direction: row;
+        padding: initial;
+        background-color: transparent;
+    }
+
+    &.open{
+        left: 0;
+    }
+
+    .list{
+        width: 100%;
+        text-align: center;
+
+        
+
+        @include for-size(tablet){
+            &:not(:first-child){
+                margin-left: 2rem;
+            }
+        }
+
+        @include for-size(large){
+            &:not(:first-child){
+                margin-left: 2.5rem;
+            }
+        }
+    }
+
+    .link{
+        font-size: 2rem;
+        display: block;
+        width: 100%;
+        transition: 0.3s;
+        color: $black;
+    
+        &.active{
+            color: $amaranth;
+        }
+    
+        @include for-size(tablet){
+            color: $white;
+            font-size: 1.25rem;
+        }
+    
+        @include for-size(large){
+            font-size: 1.5rem;
+        }
+    
+        &:hover{
+            color: $amaranth;
+        }
+    }
+
+    
+
+    .cv{
+        margin-top: 1rem;
+        
+        .resume{
+            background-color: $amaranth;
+            color: $white;
+            padding: 0.625rem 2.5rem;
+            border-radius: 5px;
+            transition: 0.5s;
+            
+            i{
+                margin-left: 0.625rem;
+            }
+
+            &:hover{
+                background-color: $pale-red;
+            }
+        }
+
+
+        @include for-size(tablet){
+            display: none;
+        }
+    }
+}
+
+
+
+.hamburger{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 9;
+
+    @include for-size(tablet) {
+        display: none;
+    }
+
+    .bar{
+        display: block;
+        width: 2rem;
+        height: 3px;
+        background-color: $white;
+        transition: 0.5s;
+
+        &:not(:last-child){
+            margin-bottom: 5px;
+        }
+    }
+
+    &.open .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+        background-color: $black;
+    }
+    
+    &.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    &.open .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+        background-color: $black;
+    }
+}
+
+
+
+
+  
+

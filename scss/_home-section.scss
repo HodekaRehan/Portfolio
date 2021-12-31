@@ -1,0 +1,125 @@
+#home-section{
+    background-color: $black;
+    min-height: calc(100vh - 3.125rem);
+    // padding: 0 1.25rem;
+    @include flex-aic-jcc;
+    
+
+    @include for-size(small){
+        min-height: calc(100vh - 3.5rem);
+        // padding: 0 1.5rem;
+
+    }
+
+    @include for-size(medium){
+        min-height: calc(100vh - 4rem);
+        // padding: 0 1.875rem;
+    }
+
+    @include for-size(tablet){
+        min-height: calc(100vh - 4.5rem);
+        // padding: 0 2.5rem;
+    }
+
+    @include for-size(large){
+        min-height: calc(100vh - 5rem);
+        // padding: 0 4rem;
+    }
+}
+
+.resume-btn{
+    display: none;
+
+    @include for-size(tablet) {
+        display: inline-block;
+        color: $white;
+        background-color: $amaranth;
+        padding: 0.625rem 3.125rem;
+        margin: 3rem 0 5% 0;
+
+        &:hover{
+            background-color: $pale-red;
+            transition: 0.5s;
+        }
+
+
+        i{
+            margin-left: 0.625rem;
+        }
+    }
+
+    @include for-size(large){
+        margin: 1.5rem 0 0 0;
+    }
+}
+
+
+
+.home{
+    align-self: flex-end;
+    padding-bottom: 1.25rem;
+
+    @include for-size(large) {
+        @include flex-aic-jcsb;
+        flex-direction: row;
+        max-width: 80em;
+        align-self: center;
+    }
+
+    .intro{
+        @include for-size(large) {
+            max-width: 50%;
+        }
+    }
+    
+    h1{
+        color: $white;
+        font-size: 2.25rem;
+        
+        @include for-size(small) {
+            font-size: 2.65rem;
+        }
+
+        @include for-size(tablet) {
+            font-size: 3.55rem;
+        }
+
+        @include for-size(large) {
+            font-size: 1.8rem;
+        }
+
+        @include for-size(xlarge) {
+            font-size: 2rem;
+        }
+
+        .name{
+            color: $amaranth;
+        }
+
+        span{
+            color: $silver;
+        }
+    }
+}
+
+.intro-img{
+    display: none;
+
+    @include for-size(large){
+        display: block;
+    }
+
+    @include for-size(large){
+        max-width: 50%;
+    }
+
+    .int-img{
+        @include for-size(large){
+            max-width: 25rem;
+        }
+
+        @include for-size(xlarge){
+            max-width: 30rem;
+        }
+    }
+}

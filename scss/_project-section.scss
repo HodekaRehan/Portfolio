@@ -1,0 +1,137 @@
+#project-section{
+    background-color: $black;
+    text-align: center;
+    color: $white;
+
+    
+}
+
+.project{
+    margin: 0 auto;
+
+    @include for-size(large){
+        padding-top: 2.5rem;
+    }
+}
+
+.project-para{
+    margin: 2rem auto 3rem;
+    font-style: italic;
+    
+    @include for-size(large){
+        font-size: 1.25rem;
+    }
+}
+
+.projects-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1.25rem;
+    margin: 2rem 0;
+
+    @include for-size(small) {
+        grid-gap: 1.5rem;
+    }
+
+    @include for-size(medium) {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem;
+        margin: 2rem 0 2.5rem 0;
+    }
+
+    @include for-size(large) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+
+    .project-tile{
+        position: relative;
+        border-radius: 5px;
+        // max-height: 18.75rem;
+        overflow: hidden;
+
+        &:hover .overlay{
+            opacity: 1;
+            
+        }
+    }
+
+    .project-image{
+        min-height: 100%;
+    }
+    
+
+    .overlay{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: 0.5s ease;
+        background-color: $white;
+
+    }
+
+    .project-title{
+        color: $black;
+        font-size: 2rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+
+.more{
+    margin: 1rem 0 0 0;
+    padding-bottom: 2.5rem;
+
+    @include for-size(tablet) {
+        padding-bottom: 3rem;
+    }
+
+    @include for-size(large) {
+        padding-bottom: 5rem;
+    }
+
+    .see-more{
+        font-size: 1.25rem;
+    }
+
+    .dest-div{
+        margin: 1rem 0;
+        @include flex-aic-jcc;
+        flex-direction: column;
+
+        @include for-size(medium){
+            flex-direction: row;
+        }
+
+        .dest{
+            background-color: $white;
+            color: $amaranth;
+            padding: 0.5rem 2rem;
+            border-radius: 5px;
+
+            &:hover{
+                background-color: $amaranth;  
+                color: $white;
+                transition: 0.5s;
+            }
+        }
+
+        .or{
+            margin: 0.625rem 0;
+            font-size: 1.25rem;
+
+            @include for-size(medium){
+                margin: 0 1rem;
+            }
+        }
+    }
+}
+    

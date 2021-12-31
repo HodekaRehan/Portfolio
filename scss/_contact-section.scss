@@ -1,0 +1,137 @@
+#contact-section{
+    background-color: $white;
+    text-align: center;
+}
+
+.contact{
+    max-width: 31.25rem;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+
+    @include for-size(large){
+        max-width: 75em;
+    }
+
+    .section-header{
+
+        @include for-size(large){
+            padding-top: 5rem;
+    
+        }
+    }
+}
+
+.contact-container{
+    @include for-size(large){
+        @include flex-aic-jcsb;
+        margin: 2rem 0;
+    }
+}
+
+.contact-img-wrapper{
+    margin: 2rem 0;
+
+    @include for-size(large){
+        max-width: 50%;
+    }
+
+    .contact-image{
+        @include for-size(large){
+            max-width: 500px;
+        }
+    }
+    
+}
+
+.contact-div{
+    @include for-size(large){
+        text-align: left;
+        max-width: 50%;
+        padding-left: 2rem;
+    }
+}
+
+.get{
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+
+    @include for-size(large){
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.contact-para{
+    font-size: 1.25rem;
+    font-weight: map-get($font-weights, light );
+    line-height: 2rem;
+
+    @include for-size(large){
+        margin-bottom: 1rem;
+    }
+    
+}
+
+.contact-info{
+    margin: 2rem 0;
+
+    @include for-size(large){
+        margin: 0;
+    }
+
+    .contact-wrapper{
+        margin-bottom: 1.75rem;
+        
+
+        @include for-size(large){
+            margin-bottom: 1rem;
+        }
+    }
+
+    .contact-name{
+        color: $amaranth;
+        font-size: 1.25rem;
+        margin-bottom: 0.325rem;
+
+        @include for-size(large){
+            font-size: 1.125rem;
+        }
+    }
+
+    .contact-detail{
+        color: $silver;
+        font-size: 0.9rem;
+
+        .link-btn{
+            padding: 0 0.625rem 0 1rem;
+            color: $silver;
+
+            &:hover{
+                transition: 0.5s;
+            }
+            
+            @include for-size(large){
+                padding: 0;
+                margin-right: 0.625rem;
+            }
+        }
+
+        .twitter{
+            &:hover{
+                color: 	#1DA1F2;
+            }
+        }
+
+        .github{
+            &:hover{
+                color: #6cc644;
+            }
+        }
+
+        .linkedin{
+            &:hover{
+                color: #0e76a8;
+            }
+        }
+    }
+}

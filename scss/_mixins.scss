@@ -1,0 +1,48 @@
+//breakpoints
+@mixin for-size($size) {
+    @if $size == small {
+      @media (min-width: 25em) { //400
+          @content; 
+        }
+    } @else if $size == medium {
+      @media (min-width: 37.5em) { //600
+          @content; 
+        }
+    } @else if $size == tablet {
+      @media (min-width: 48em) { //768
+          @content; 
+        }
+    } @else if $size == large {
+      @media (min-width: 62em) { //992
+          @content; 
+        }
+    } @else if $size == xlarge {
+      @media (min-width: 75em) { //1200
+          @content; 
+        }
+    } 
+    // @else if $size == large {
+    //   @media (min-width: 87.5em) { //1400
+    //       @content; 
+    //     }
+    // }
+  }
+
+//flex
+@mixin flex-aic{
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-aic-jcc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-aic-jcsb {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
